@@ -1,20 +1,16 @@
 import React from "react";
-import AssignmentMockData from './MockData/AssignmentMockData';
-import AssignmentDetails from "./AssignmentDetails";
 
-function AssignmentListPage(props) {
+import AssignmentDetails from "./AssignmentDetails";
+import AssignmentMockData from "./MockData/assignmentMockData";
+
+function AssignmentListPage() {
     return(
         
         <div>
-          <h1 className="mb-4 text-xl font-semibold ">Assignments</h1>
+          <h1 className="mb-4 text-xl font-bold mb-4 ">Assignments</h1>
         <div className="flex-col p-10 pt-2 bg-gray-100 ">
           
-          {AssignmentMockData.map((e) => { 
-            return (
-              <AssignmentDetails key={e.id} assignmentNumber={e.assignmentNumber} assignmentTitle={e.assignmentTitle} publishedDate={e.publishedDate} dueDate={e.dueDate} status={e.status }></AssignmentDetails>
-            );
-          }) }
-           
+        {AssignmentMockData.map(assignment =><AssignmentDetails assignment={assignment}></AssignmentDetails>)}
           </div>    
         </div>
             

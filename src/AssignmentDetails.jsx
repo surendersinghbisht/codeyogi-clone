@@ -3,29 +3,22 @@ import {Link} from 'react-router-dom'
 
 function AssignmentDetails(props) { 
     return (
-        <>
-        <Link to={`/assignments/${props.assignmentNumber}/description` }>
-         <div className="p-4 m-5 bg-white border-2 border-gray-200 rounded-md shadow-md ">
-                
-            <div className='space-x-2 font-semibold text-md'>
-                <span>#{props.assignmentNumber} </span>
-                <span>{props.assignmentTitle}</span>
-                <span className='text-gray-500 text-md'>({props.publishedDate})</span>
-            </div>
-            
-            <div className='flex justify-between pt-4'>
-                <span className='text-red-500'>Due Date: {props.dueDate}</span>
-                <span className='text-lg font-semibold text-green-600'>{props.status}</span>
-            </div>
-            <div className='flex justify-between pt-6 pb-4 mx-40'>
-                <a className='font-semibold text-green-600' href="#">Re-submit</a>
-                <a className='font-semibold text-blue-600 underline' href="#">Check your submission</a>
-            </div>
-            
-            
-         </div>
-        </Link>
-        </>
+       <div className='bg-white shadow-md rounded-md p-4 m-5'>
+
+<div className='flex space-x-4'>
+    
+      <h1 className='font-semibold'> #{props.assignment.id}</h1>
+      <h1 className='font-semibold'>{props.assignment.assignmentTitle}</h1>
+      <h3 className='text-gray-400 font-bold'>({props.assignment.publishedDate})</h3>
+      </div>
+    <h2 className='text-red-600'>Due Date:{props.assignment.dueDate}</h2>
+
+    <h2 className='text-green-600 flex justify-end' >Submited</h2>
+    <div className='text-center flex-col'> 
+      <h1 className='text-green-700'>Re-submit</h1>
+      
+      <a href="https://www.google.co.in/" className='text-blue-500 underline'>see your assignment</a>
+       </div></div>
     );
 }
 
