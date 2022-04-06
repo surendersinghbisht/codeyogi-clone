@@ -1,9 +1,9 @@
 import React from 'react';
 
 
-
 function LectureDetails(props) {
   return (
+    
     <div className="p-4 m-5 font-semibold bg-white border-2 border-gray-50 rounded-md shadow-md ">
    
         <div className='flex flex-col ml-4 '>
@@ -24,6 +24,7 @@ function LectureDetails(props) {
 </div>
 
     </div>
+   
  
 
   );

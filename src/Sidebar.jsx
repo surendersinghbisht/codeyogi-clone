@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 
+
 function Sidebar(){
 return(
 
@@ -9,7 +10,7 @@ return(
   <Link to="/assignments" className='hover:bg-gray-500 text-white text-xl ml-6'>Assignments</Link>
       <Link to="/lectures" className='hover:bg-gray-500 text-white text-xl ml-6'>Lectures</Link>
       
-      <Link to="/Quiz" className='hover:bg-gray-500 text-white text-xl ml-6'>Quiz</Link>
+  <h1><Link to="/Quiz" className='hover:bg-gray-500 text-white text-xl ml-6'>Quiz</Link></h1> 
      
       <span className='h-72 mt-10'></span>
       

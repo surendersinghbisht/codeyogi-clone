@@ -1,8 +1,10 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+
 
 function AssignmentDetails(props) { 
     return (
+      <Link to={`/assignments/${props.assignment.id}/description` }>
        <div className='bg-white shadow-md rounded-md p-4 m-5'>
 
 <div className='flex space-x-4'>
@@ -19,6 +21,7 @@ function AssignmentDetails(props) {
       
       <a href="https://www.google.co.in/" className='text-blue-500 underline'>see your assignment</a>
        </div></div>
+       </Link>
     );
 }
 

@@ -1,7 +1,7 @@
 const AssignmentMockData = [
     {
       id: 1,
-      
+     
       assignmentTitle: "Create TODO App",
       publishedDate: "tuesday Jan 18 2022",
       dueDate: "Wednesday Jan 02 2022",
@@ -10,7 +10,7 @@ const AssignmentMockData = [
     
     {
       id: 2,
-      
+     
       assignmentTitle: "ask jud",
       publishedDate: "tuesday Jan 25 2022",
       dueDate: "Wednesday Jan 18 2022",
