@@ -7,6 +7,7 @@ import {Navigate ,BrowserRouter ,Routes, Route } from 'react-router-dom';
 import MainLayout from './MainLayout';
 import NotFound from './NotFound';
 import Profile from './Profile'
+import StudentList from './StudentList';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
     <Route path="assignments/:id/description" element={<AssignmentDescription /> } />
     <Route path="lectures" element={<LectureList/>}/>
     <Route path="profile" element={<Profile />}></Route>
+    <Route path="students" element={<StudentList />}></Route>
     </Route>
 <Route path="Quiz" element={<QuizPage/>}/>
 <Route path="*"element={<NotFound />} />
