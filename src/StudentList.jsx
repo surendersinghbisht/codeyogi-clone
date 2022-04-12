@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState}  from "react";
 import axios from "axios";
 import StudentsRow from "./StudentsRow";
 
@@ -14,6 +14,7 @@ function StudentList(props) {
         const token = axios.get("https://randomuser.me/api/?results=10")
         token.then((response) => {
             setStudents(response.data.results);
+            console.log(response.data.results);
         });
     }, []);
     

@@ -1,17 +1,30 @@
+
 import React from 'react';
 import LectureDetails from './LectureDetails';
-import lectureData from './MockData/lectures';
+import axios from 'axios';
 
+
+      
 function LectureList() {
-    return (
-      <>
-      <h1 className='font-bold text-2xl mb-4 '>Lectures</h1> 
-      <div className="h-full p-10 pt-2 bg-gray-100 ">
+
+  const [lectures, setLectures ] = React.useState([]);
+
+  React.useEffect( () => {
+      const token= axios.get("https://api.codeyogi.io/batches/1/sessions",
+      {withCredentials: true});
+      
+      token.then((response) => {
+        setLectures(response.data);
        
-{lectureData.map(lecture => <LectureDetails lecture={lecture}></LectureDetails>)}
-  
+      });
+  }, []);
+
+
+
+    return (
+      <div className="h-full p-10 bg-white">
+      {lectures.map((l) => <LectureDetails lecture={l} />)}
     </div>
-    </>
   
     );
   }
