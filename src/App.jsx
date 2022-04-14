@@ -1,7 +1,7 @@
 import React from 'react';
 import LectureList from './LectureList';
 import AssignmentList from './AssignmentList'
-import AssignmentDescription from './AssignmentDiscription';
+import AssignmentDescription from './AssignmentDescription';
 import QuizPage from './QuizPage';
 import {Navigate ,BrowserRouter ,Routes, Route } from 'react-router-dom';
 import MainLayout from './MainLayout';

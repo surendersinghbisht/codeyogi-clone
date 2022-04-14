@@ -4,6 +4,7 @@ import LectureDetails from './LectureDetails';
 import axios from 'axios';
 
 
+
       
 function LectureList() {
 
@@ -22,10 +23,13 @@ function LectureList() {
 
 
     return (
+      <>
+       <h1 className="mb-4 text-xl font-bold  ">Lectures</h1>
       <div className="h-full p-10 bg-white">
+       
       {lectures.map((l) => <LectureDetails lecture={l} />)}
     </div>
-  
+  </>
     );
   }
   
