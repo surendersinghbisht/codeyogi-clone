@@ -28,9 +28,9 @@ const showSidebar=()=>{
 
          </div>
          {sidebar &&
-         <div className=' absolute left-0 top-0'>
-  <div className='   bg-gray-700 pr-10  '>
-    <button className='font-bold text-lg text-white text-end  sm:hidden block ml-40' onClick={()=>setSidebar(false)}>X</button>
+         <div className=' absolute left-0  top-0 '>
+  <div className='   bg-gray-700 pr-10   '>
+    <button className='font-bold text-lg text-white text-end  sm:hidden block ml-40 pt-6' onClick={()=>setSidebar(false)}>X</button>
     <div className='flex flex-col space-y-4  py-4'>
     <h1 className='text-3xl text-white font-bold ml-6'>CODEYOGI</h1>
     <Link to="/assignments" className='hover:bg-gray-500 text-white text-xl ml-6'>Assignments</Link>

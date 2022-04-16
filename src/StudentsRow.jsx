@@ -6,8 +6,8 @@ import { FaInstagram } from 'react-icons/fa';
 function StudentsRow({user}) {
     return (
         <div>
-            <div className="my-4 rounded-md shadow-sm w-72 ">
-                 <img className="w-64 h-40 pt-2 mx-auto rounded-lg" src={user.picture.large } alt="" />
+            <div className="my-4 rounded-md shadow-sm w-44 sm:w-72 ">
+                 <img className="w-64 h-40 pt-2 mx-auto rounded-lg" src={user.picture.large } />
                  <div className="flex flex-col ml-4 space-y-2">
                     <div className="font-semibold">{user.name.title} {user.name.first} {user.name.last}</div>
                 

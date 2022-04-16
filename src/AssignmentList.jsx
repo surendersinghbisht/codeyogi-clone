@@ -5,6 +5,7 @@ import AssignmentDetails from "./AssignmentDetails";
 function AssignmentListPage() {
 
   const [assignments, setAssignments ] = React.useState([]);
+  
 
   React.useEffect( () => {
       const token= axios.get("https://api.codeyogi.io/batches/1/assignments",

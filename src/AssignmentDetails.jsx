@@ -6,30 +6,22 @@ import { useNavigate} from 'react-router-dom';
 
 function AssignmentDetails({ assignment }) {
 
+  
+
   const [showPopup, updateShowPopup] = React.useState(false);
 
   const hidePopup = () => {
     updateShowPopup(false);
   }
 
-  const [submissionLink, setSubmissionLink] = React.useState('');
-
-  const submitAssignment =()=> {
-axios.put(`https://api.codeyogi.io/${assignment.id}/submit`,
-{submissionLink}, {withCredentials: true});
-  } 
-
-  const onSubmissionChange= (event)=> {
-  const  newSubmissionLink =event.target.value;
-  setSubmissionLink(newSubmissionLink);
-  }
+  
   
 const navigate =useNavigate();
 
   return (
-
+<div>
     <div className='bg-white shadow-md rounded-md p-4 m-5' >
-<div onClick={() => navigate(`/assignments/${assignment.id}/description`)} >
+      <div onClick={() => navigate(`/assignments/${assignment.id}/details`)} >
       <div className='flex space-x-4'>
         <h1 className='font-semibold'> #{assignment.id}</h1>
         <h1 className='font-semibold'>{assignment.title}</h1>
@@ -40,26 +32,28 @@ const navigate =useNavigate();
 
       <h2 className='text-green-600 flex justify-end' >Submited</h2>
       </div>
-      <div >
-        <Button onClick={() => updateshowPopup(true)}>submit</Button>
+      <div>
+        <Button onClick={() => updateShowPopup(true)}>submit</Button>
 
         <a  className='text-blue-500 underline'>see your assignment</a>
       </div>
-
-      {showPopup && (
-        <div className='p-10  bg-gray-100  shadow-lg rounded-lg flex justify-center space-x-4  '>
-          <div className='flex flex-col'>
-            <button onClick={hidePopup} className='rounded-full p-1 flex justify-end text-red-500 font-extrabold mb-6 '>X</button>
-            <div className='flex space-x-4'>
-            <input value={submissionLink} onChange={onSubmissionChange} placeholder='submission link' className='px-20  rounded-md border  border-black ml-4' type="text" />
-            <Button className="mt-4">save</Button></div>
-          </div>
+     
+     
+    </div>
+     {showPopup && (
+      <div className='p-10  bg-gray-200 W-60 h-60  shadow-lg rounded-lg flex justify-center space-x-4  '>
+        <div className='flex flex-col'>
+          <button onClick={hidePopup} className='rounded-full p-1 flex justify-end text-red-500 font-extrabold mb-6 '>X</button>
+          <div className='flex space-x-4'>
+          <input  placeholder='submission link' className='px-20  rounded-md border  border-black ml-4' type="text" />
+          <Button className="mt-4">save</Button></div>
         </div>
-      )}
+      </div>
+      
+    )}
     </div>
   );
-
-
+  
 }
 
 export default AssignmentDetails;

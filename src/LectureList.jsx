@@ -3,8 +3,6 @@ import React from 'react';
 import LectureDetails from './LectureDetails';
 import axios from 'axios';
 
-
-
       
 function LectureList() {
 
