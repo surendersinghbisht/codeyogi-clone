@@ -1,15 +1,32 @@
-import PreviousMap from 'postcss/lib/previous-map';
+import {  useField } from 'formik';
 import React from 'react';
+import { Children } from 'react/cjs/react.production.min';
 
 
-function Input(props) {
+
+function Input({id, type, name,Children,...rest}) {
+
+const [field, meta] = useField(name);
+
   return (
-      <div>
- <div className='flex items-center justify-between px-10 py-6 '>
-     <h1 className='text-gray-600'>{props.children}</h1>
-     <input className='border-gray-200 rounded-md border-2 px-40' placeholder={props.placeholder} ></input>
-     
-    </div><hr /></div>
+      <div className='items-center justify-between py-6 sm:px-20 sm:flex'>
+
+<label htmlFor={id} className="text-gray-500">{Children}</label> 
+<div>
+<input onChange={field.onChange} 
+onBlur={field.onBlur}
+value={field.value}
+id={id}
+name={name}
+type={type || 'text'}
+{ ...rest}
+className="block w-11/12 py-2 bg-gray-100 border-2 border-gray-200 rounded-md sm:w-96"
+/>
+{meta.error&& meta.touched &&(
+  <span className="text-sm text-red-500 h-10 ">{meta.error}</span>
+)}
+</div>
+</div>
 
   );
 }
