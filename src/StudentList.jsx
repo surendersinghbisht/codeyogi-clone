@@ -1,6 +1,8 @@
 import React, {useEffect, useState}  from "react";
 import axios from "axios";
 import StudentsRow from "./StudentsRow";
+import { getStudents } from "./api";
+import { data } from "autoprefixer";
 
 
 
@@ -11,11 +13,11 @@ function StudentList(props) {
     const [students, setStudents] = useState([]);
       
     useEffect(() => {
-        const token = axios.get("https://randomuser.me/api/?results=10")
-        token.then((response) => {
-            setStudents(response.data.results);
-            console.log(response.data.results);
-        });
+        const promise= getStudents();
+        promise.then(data=>{
+            setStudents(data);
+        })
+        
     }, []);
     
 

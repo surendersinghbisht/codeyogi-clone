@@ -107,7 +107,7 @@ const validationSchema=object().shape({
           </Input>
           </Form>
           </Formik>
-          <Button>Update</Button>
+          <Button type="submit">Update</Button>
       </div>
 
   
