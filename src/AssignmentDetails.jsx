@@ -46,7 +46,7 @@ const navigate =useNavigate();
           <button onClick={hidePopup} className='rounded-full p-1 flex justify-end text-red-500 font-extrabold mb-6 '>X</button>
           <div className='flex space-x-4'>
           <input  placeholder='submission link' className='px-20  rounded-md border  border-black ml-4' type="text" />
-          <Button className="mt-4">save</Button></div>
+          <Button theme="red" className="mt-4">save</Button></div>
         </div>
       </div>
       

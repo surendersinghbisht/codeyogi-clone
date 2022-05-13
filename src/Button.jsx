@@ -2,11 +2,22 @@
 import React from 'react';
 
 
-function Button(props) {
+function Button({theme, children, ...rest}) {
+
+  let themeClasses="";
+
+if(theme === "red"){
+  themeClasses="bg-red-500 border border-red-800 hover:bg-red-300";
+}else{
+  themeClasses="bg-indigo-500 border border-indigo-800 hover:bg-indigo-300";
+}
+
+
   return (
+
  <div>
-     <button onClick={props.onClick} type={props.type}
-       className='rounded-sm bg-indigo-700 px-6 text-white py-2  hover:bg-blue-400'>{props.children}  </button>
+     <button {...rest}
+       className={'rounded-sm  text-white py-2 ' + themeClasses}>{children}  </button>
     </div>
 
   );

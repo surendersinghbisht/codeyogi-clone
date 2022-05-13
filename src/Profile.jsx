@@ -47,6 +47,7 @@ const validationSchema=object().shape({
         
           <Input
             id="firstName"
+            Children="first name"
             required
             placeholder="First Name"
             name="firstName"
@@ -56,6 +57,7 @@ const validationSchema=object().shape({
           
           <Input
             id="lastName"
+            Children="last name"
             placeholder="Last Name"
             name="lastName"
             required
@@ -66,6 +68,7 @@ const validationSchema=object().shape({
           <Input
             id="email"
             placeholder="email adress"
+            Children="email"
             name="email"
             required
             autoComplete="email"
@@ -74,6 +77,7 @@ const validationSchema=object().shape({
 
           <Input
             id="instituteName "
+            Children="college name"
             placeholder="institute name"
             name="instituteName"
             required
@@ -82,6 +86,7 @@ const validationSchema=object().shape({
           </Input>
           <Input
             id="year "
+            Children="year of passout"
             placeholder="year of passout"
             name="year"
             required
@@ -90,6 +95,7 @@ const validationSchema=object().shape({
           </Input>
           <Input
             id="phoneNo "
+            Children="phone no."
             placeholder="phone number"
             name="phoneNo"
             required
@@ -99,6 +105,7 @@ const validationSchema=object().shape({
 
           <Input
             id="branch "
+            Children="branch name"
             placeholder="branch name"
             name="branch"
             required
@@ -107,7 +114,7 @@ const validationSchema=object().shape({
           </Input>
           </Form>
           </Formik>
-          <Button type="submit">Update</Button>
+          <Button onClick={console.log('ff')} >Update</Button>
       </div>
 
   

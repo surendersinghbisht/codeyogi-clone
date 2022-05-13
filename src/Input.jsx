@@ -1,15 +1,14 @@
 import {  useField } from 'formik';
 import React from 'react';
-import { Children } from 'react/cjs/react.production.min';
 
 
 
-function Input({id, type, name,Children,...rest}) {
+function Input({id, type, name, Children,...rest}) {
 
 const [field, meta] = useField(name);
 
   return (
-      <div className='items-center justify-between py-6 sm:px-20 sm:flex'>
+      <div className='items-center space-x-4 justify-between py-6 sm:px-20 sm:flex'>
 
 <label htmlFor={id} className="text-gray-500">{Children}</label> 
 <div>
