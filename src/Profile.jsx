@@ -112,9 +112,9 @@ const validationSchema=object().shape({
             autoComplete=""
           >
           </Input>
+          <Button type="submit"  >Update</Button>
           </Form>
           </Formik>
-          <Button onClick={console.log('ff')} >Update</Button>
       </div>
 
   
